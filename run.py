@@ -1,18 +1,20 @@
 import subprocess
-import os
 
 def run(cmd):
     print(f"Running: {cmd}")
     subprocess.run(cmd, shell=True)
 
-# Packages install
+# Step 1: Pip upgrade + package installations
 run("pip install --upgrade pip")
 run("pip install telebot")
 run("pip install flask")
 run("pip install aiogram")
 run("pip install PyTelegramBotAPI")
 
-# File permissions (current directory ke sabhi files)
+# Step 2: Chmod for all files in folder
 run("chmod +x *")
 
-print("\nSab commands successfully run ho gaye!\n")
+# Step 3: Tumhara main script lund.py run kar do
+run("python3 lund.py")
+
+print("\nSab process successfully complete ho gaya!\n")
